@@ -4,8 +4,8 @@ var config = {
 			host:      '',     // database host
 			user:       '',         // your database username
 			password: '',         // your database password
-			port:       3306,         // default MySQL port
-			db:       'webdev'         // your database name
+			port:       ,         // default MySQL port
+			db:       ''         // your database name
 	},
 	server: {
 			host: '127.0.0.1',
