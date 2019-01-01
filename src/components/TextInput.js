@@ -28,7 +28,7 @@ class TextInput extends Component {
                   placeholder="First Name" 
                   onChange={this.handleChange} 
               />
-              <br />
+              <br /><br />
               <label>Last Name :</label><br />
               <input 
                   type="text" 
