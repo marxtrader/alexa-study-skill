@@ -1,5 +1,4 @@
 import React from 'react'
-import Radio from './radio'
 
 const TextArea = (props) => (  
   <div className="form-group">
@@ -12,15 +11,7 @@ const TextArea = (props) => (
         value={props.value}
         onChange={props.handleChange}
         placeholder={props.placeholder} />
-      <Radio />
   </div>
 );
 
 export default TextArea;
-
-<Radio />
-        {/* <Button
-          title={"submit"}
-          style={"btn btn-primary"}
-          action={this.handleSubmit} 
-        /> */}

@@ -7,7 +7,7 @@ const Footer = () => {
     <div>
       <div className="footer">
         <address>
-          www.chrisranni.com<sup>&copy;</sup><br />
+          Chris Ranni<br />
           156 Piermont Ave Piermont, NY 10968 (973) 987-2560
         </address>
       </div>

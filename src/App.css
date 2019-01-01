@@ -31,7 +31,7 @@ body {
   display:grid;
   grid-template-columns:45% auto;
   grid-gap:5%;
-  grid-template-rows:400px;
+  grid-template-rows:500px;
   width:100%;
   margin:auto;
 }
@@ -41,6 +41,9 @@ body {
 }
 .right {
   margin-right:75px;
+}
+.right li {
+  padding-bottom:8px;
 }
 .temp h1{
   color:limegreen;
@@ -67,5 +70,11 @@ button {
   padding:10px;
 }
 .footer {
+  display:grid;
+  grid-template-columns:100%;
+  grid-template-rows:5px;
   text-align:center;
+}
+fieldset {
+  margin-top:15px;
 }
