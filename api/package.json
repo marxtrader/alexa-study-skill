@@ -1,0 +1,35 @@
+{
+  "name": "class-final-project",
+  "version": "1.0.0",
+  "description": "A simple website built with Node, Express and Pug",
+  "main": "app.js",
+  "scripts": {
+    "start": " npx pm2 start server.js --watch",
+    "test": "node tests/test.js"
+  },
+  "author": "Christopher Ranni",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "consolidate": "^0.15.1",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.5",
+    "debug": "^2.2.0",
+    "ejs": "^2.6.1",
+    "express": "^4.14.0",
+    "express-es6-template-engine": "^2.1.7",
+    "express-flash": "0.0.2",
+    "express-myconnection": "^1.0.4",
+    "express-session": "^1.15.6",
+    "express-validator": "^5.3.0",
+    "method-override": "^3.0.0",
+    "morgan": "^1.7.0",
+    "mysql": "^2.16.0",
+    "npx": "^10.2.0",
+    "pug": "^2.0.3",
+    "pug-cli": "1.0.0-alpha6",
+    "serve-favicon": "^2.3.0"
+  },
+  "devDependencies": {
+    "pm2": "^2.10.3"
+  }
+}

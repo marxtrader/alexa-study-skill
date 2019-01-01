@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+  <head>    
+    <!--
+            For Traders 0nly...
+            Author: Chris Ranni
+            Date: Sept, 22, 2018
+        -->
+        <title>
+            FTO
+        </title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="Content-Language" content="en">
+
+        <meta name="author" 
+        content="Christopher Ranni"/>
+  
+        <meta name= "description" 
+        content="Satisfaction of requirements" />
+  
+        <meta name="keywords" 
+        content="Forex cryptos bitcoin ethereum trading wall street" />
+
+    <link rel="stylesheet" href="css/grid.css">
+  </head>
+  <body id="body" class="tradingPanel">
+    <header class="banner-wrapper">   
+      <div>
+        <h1>For Traders Only...</h1>
+      </div>
+      <div class="navigation">
+        <ul id="navUL">
+          <li><a href=""><span style="color:red;font-size:1.2em">D</span>ashboard</a></li>
+          <li><a href=""><span style="color:red;font-size:1.2em">T</span>rading</a></li>
+          <li><a href=""><span style="color:red;font-size:1.2em">A</span>ccount</a></li>
+        </ul>
+      </div>  
+    </header>
+
+    <main class='start-page'>   
+      <form action="axios" method="post" id="loginForm" class='loginForm'>
+        <fieldset>
+        <legend>Login</legend>
+        <br>
+          Membership is free with a valid email.  
+          <br>
+          <br>
+          <label>Email
+            <br>
+            <br>
+          <input type="email" name="login" placeholder="user@email.com" required></label>
+          <br>
+          <br>											
+          <label>Password
+            <br><br>
+          <input type="password" name="login" placeholder="Password" required></label>
+          <br>
+          <br>
+          <br>
+          <input class="button loginFormButton" form="login" id=btnLogin type="submit" value="login">						
+        </fieldset>
+      </form>
+    </main>
+
+    <!--Attempt to use ajax to make a post request for a login , No Joy -->
+    <script src="js/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+    
+    <!--Event Listeners and event handlers for page content. -->
+    <script src="js/helpers.js"></script>
+  </body>
+</html>

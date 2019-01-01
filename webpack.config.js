@@ -1,5 +1,6 @@
 const path = require("path");
 const webpack = require("webpack");
+const config = require('./config/config')
 
 module.exports = {
   entry: "./src/index.js",
@@ -19,6 +20,11 @@ module.exports = {
     ]
   },
   resolve: { extensions: ["*", ".js", ".jsx"] },
+  node: {
+    fs: 'empty',
+    net: 'empty',
+    tls: 'empty',
+  },
   output: {
     path: path.resolve(__dirname, "dist/"),
     publicPath: "/dist/",
@@ -26,8 +32,8 @@ module.exports = {
   },
   devServer: {
     contentBase: path.join(__dirname, "public/"),
-    port: 3000,
-    publicPath: "http://localhost:3000/dist/",
+    port: config.server.port,
+    publicPath: `http://${config.server.host}/dist/`,
     hotOnly: true
   },
   plugins: [new webpack.HotModuleReplacementPlugin()]

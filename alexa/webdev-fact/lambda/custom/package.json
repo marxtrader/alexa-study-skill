@@ -1,0 +1,11 @@
+{
+  "name": "web-dev-html-css",
+  "version": "1.0.0",
+  "description": "study app for webdev",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "alexa-sdk": "^1.0.0"
+  }
+}
