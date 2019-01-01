@@ -7,8 +7,7 @@ class TextInput extends Component {
         this.state = {
             firstName: "",
             lastName: "",
-            fact:"",
-            type:false
+            fact:""
         }
         this.handleChange = this.handleChange.bind(this)
         this.handleClick = this.handleClick.bind(this);
@@ -16,14 +15,22 @@ class TextInput extends Component {
 
     handleClick(event) {
       event.preventDefault();
+      let data = {
+        firstName:this.state.firstName,
+        lastName:this.state.lastName,
+        textarea:this.state.textarea //document.querySelector([name='fact'])
+      }
       const {firstName, lastName, fact, type} = event.target
-      console.log(event)
-      console.log(event.target)
-      console.log(firstName, lastName, fact, type)
+      console.log(data)
     }
-    
+
+    handleTextArea(event) {
+      this.setState({ [name] : value })
+    }
+
     handleChange(event) {
       const {name, value, type, checked} = event.target
+      
       type === "checkbox" ? this.setState({ [name]: checked }) : this.setState({ [name]: value })
   }
     
@@ -54,41 +61,16 @@ class TextInput extends Component {
                       onChange={this.handleChange} 
                   /><br /><br />
 
-                  {/* <label>
-                    <input 
-                        type="checkbox" 
-                        name="isFriendly"
-                        checked={this.state.isFriendly}
-                        onChange={this.handleChange}
-                    /> Is friendly?
-                  </label> */}
-                  
-                  {/* <p>Facts will be used for making a statement. False statements will be used in true and false questions</p> */}
                   <label><h3>Create a fact or a false answer.</h3></label>
-                  <TextArea                   
-                    name={'fact'}
+                  <textarea
+                    name='textarea'
                     rows={5}
-                    cols={50}  
-                    placeholder="Grid is a display property. Known as the grid system."
-                    required  
+                    cols = {50}
+                    value={this.state.textarea}
                     onChange={this.handleChange}
+                    placeholder="Enter Fact"
                   />
-                  <div className="radio">
-                  <label> 
-                      <input 
-                        type="radio" 
-                        name="questionType" 
-                        checked={this.state.checked}
-                        onChange={this.handleChange}
-                      />Fact</label>
-
-                    <label> 
-                      <input type="radio" 
-                        name="questionType" 
-                        checked={this.state.checked}
-                        onChange={this.handleChange}
-                      />False</label><br /><br />
-                  </div>
+                  
                   <button>Submit</button>
                 </fieldset>
               </form>
@@ -98,3 +80,14 @@ class TextInput extends Component {
 }
 
 export default TextInput
+
+{/* <TextArea       
+                    type="text"            
+                    name='fact'
+                    value={this.state.fact}
+                    rows={5}
+                    cols={50}                    
+                    onChange={this.handleTextArea}
+                    placeholder="Grid is a display property. Known as the grid system."
+                    required                      
+                  /> */}
