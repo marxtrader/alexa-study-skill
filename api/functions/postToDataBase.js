@@ -5,8 +5,10 @@ var postToDataBase = function(data, cb) {
 
     console.log("first name : ", data.firstName)
     console.log("last name : ", data.lastName)
-    console.log("first name : ", data.textarea)
-
+    console.log("fact : ", data.fact)
+    console.log("topic : ", data.topic)
+    console.log("property : ", data.property)
+    
 		var connection = mysql.createConnection({
 			host: config.database.host,
 			user: config.database.user,
@@ -20,15 +22,9 @@ var postToDataBase = function(data, cb) {
 			}
 		})
 
-		connection.query(`INSERT INTO facts (firstName, lastName, fact) VALUES (data.firstName, data.lastName, data.fact)`, function(err,rows){
+		connection.query(`INSERT INTO facts(firstName, lastName, fact, topic, property) VALUE ('${data.firstName}','${data.lastName}', '${data.fact}', '${data.topic}', '${data.property}');`, function(err,rows){
 			//if(err) throw err
 			if (err) {		
-				// render to views/error else pass data to call back function cb.
-				res.render('error', {
-					title: 'Error',
-					message: err.message,
-					error: err.status
-				});
 				cb(err, null)
 			} else {				
 				cb(null, true)

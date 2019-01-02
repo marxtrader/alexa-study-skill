@@ -8,9 +8,6 @@ var bodyParser = require('body-parser');
 var config = require('./config/config');
 var cors = require('cors');
 var request = require('request');
-var loginUser = require('./functions/loginUser')
-var facts = require('./routes/facts')
-var routes = require('./routes')
 
 // instanciate the express object.
 var app = express();
@@ -22,9 +19,6 @@ var app = express();
 //create static routes. These directories contain static assets (CSS, javacript's)
 //app.use(express.static(path.join(__dirname, 'views')));
 
-app.use('/', routes);
-app.use('/facts', facts);
-
 // cross origin resource sharing. This allows all clients to make calls to the server. You can configure this module further by creating white lists. For example. If you sell access to your api, you can restrict access to non subscribers.
 app.use(cors());
 
@@ -35,6 +29,17 @@ app.use(cookieParser());
 
 //creates a log of server requests 
 app.use(logger());
+
+app.get('/', function(req,res){
+  const fact = facts(res.body.firstName, res.body.lastName, res.body.fact)
+  res.send(fact)
+})
+
+// post to add new facts to the db from the web interface. 
+app.post('/', function(req, res) {
+  //postToDataBase(req.body)
+  console.log("request body > ", req.body)
+})
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

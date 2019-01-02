@@ -2,7 +2,7 @@ import React from 'react'
 import TextArea from './TextArea'
 import TextInput from './TextInput'
 import Button from './Button'
-import MyForm from './MyForm'
+import FactForm from './FactForm'
 // import Form from './Form'
 import "../App.css";
 // import "../bootstrap.css"
@@ -16,7 +16,7 @@ const MainContent = () => {
 
   return (
     <div>
-      <TextInput />
+      <FactForm />
     </div>
   )
 }

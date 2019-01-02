@@ -5,13 +5,15 @@
     constructor() {
       super()
       this.state = {
-          selectedOption: "Fact"
+          selectedOption: ""
       }
     }
 
     handleChange(event) {
+      console.log(event.target.value)
       this.setState({
           selectedOption: event.target.value
+
       })
     }
 
@@ -20,15 +22,23 @@
         <div>
           <div className="radio">
               <label>
-                <input type="radio" value="Fact" name="questionType"/>
-                Fact
+                <input 
+                  type="radio" 
+                  value={this.state.selectedOption} 
+                  name="topic" 
+                  onChange={this.handleChange}
+                  topic='css'
+                />css
               </label>
-          {/* </div>
-          <div className="radio"> */}
-            <label>
-              <input type="radio" value="False" name="questionType" />
-              False
-            </label><br /><br />
+              <label>
+                <input 
+                  type="radio" 
+                  value={this.state.selectedOption} 
+                  name="topic" 
+                  onChange={this.handleChange} 
+                  topic="html"
+                />html
+              </label><br /><br />
           </div>
         </div>
       )

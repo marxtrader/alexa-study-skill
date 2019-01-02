@@ -4,12 +4,10 @@ const axios = require('axios')
 const config = require('../../config/config')
 
 const postToServer = function() {
-  const userName=document.querySelector('[type=email]')
-  const password=document.querySelector('[type=password]')
   
   // TODO store url for the api server in the config.
   axios.post('http://api.marxcloud.com/', {
-    userName: userName,
+    firstName: firstName,
     password: password
   })
   .then(function (response) {

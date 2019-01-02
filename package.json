@@ -7,9 +7,9 @@
     "start": "webpack-dev-server --mode development"
   },
   "keywords": [
-    "alexa skill", 
-    "express", 
-    "react" 
+    "alexa skill",
+    "express",
+    "react"
   ],
   "author": "Christopher Ranni",
   "license": "ISC",
@@ -23,9 +23,11 @@
     "style-loader": "^0.23.0",
     "webpack": "^4.19.1",
     "webpack-cli": "^3.1.1",
-    "webpack-dev-server": "^3.1.8"
+    "webpack-dev-server": "^3.1.8",
+    "webpack-node-externals": "^1.7.2"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "lodash": "^1.0.0",
     "mysql": "^2.16.0",
     "react": "^16.5.2",

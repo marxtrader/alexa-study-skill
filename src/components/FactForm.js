@@ -1,15 +1,18 @@
 import React, {Component} from "react"
 import TextArea from './TextArea'
 import axios from 'axios'
+import Radio from './Radio'
 let returnMessage = '';
 
-class factForm extends Component {
+class FactForm extends Component {
     constructor() {
         super()
         this.state = {
             firstName: "",
             lastName: "",
-            fact:""
+            fact:"",
+            topic:"",
+            property:""
         }
         this.handleChange = this.handleChange.bind(this)
         this.handleClick = this.handleClick.bind(this);
@@ -20,7 +23,9 @@ class factForm extends Component {
       let data = {
         firstName:this.state.firstName,
         lastName:this.state.lastName,
-        textarea:this.state.textarea 
+        textarea:this.state.textarea,
+        topic:this.state.topic,
+        property:this.state.property        
       }
       console.log("Entering handleClick Data Object = ",data)
 
@@ -29,7 +34,9 @@ class factForm extends Component {
       axios.post('http://localhost:4000/facts', {
         firstName: data.firstName,
         lastName : data.lastName,
-        fact : data.textarea
+        fact : data.textarea,
+        topic: data.topic,
+        property:data.property
       })
       .then(function (response) {
         const data = JSON.stringify(response.data)
@@ -48,15 +55,14 @@ class factForm extends Component {
     }
 
     handleChange(event) {
-      const {name, value, type, checked} = event.target
-      
-      type === "checkbox" ? this.setState({ [name]: checked }) : this.setState({ [name]: value })
+      const {name, value, type} = event.target
+      type === "radio" ? this.setState({ [name]: value }) : this.setState({ [name]: value })
   }
     
     render() {
         return (
           <div>
-            <form onClick={this.handleClick} className='fact-form'>
+            <form className='fact-form'>
               <fieldset>
                 <legend> Enter A Fact</legend>
                 <h2>Contribute, Tell us who you are.</h2>
@@ -80,7 +86,21 @@ class factForm extends Component {
                       onChange={this.handleChange} 
                   /><br /><br />
 
-                  <label><h3>Create a fact or a false answer.</h3></label>
+                  <label>Topic
+                    <input type="radio"  name="topic" value="css" onChange={this.handleChange} />CSS
+                    <input type="radio"  name="topic" value="html" onChange={this.handleChange} />HTML
+                  </label><br /><br />
+
+                  <label>Property or Tag</label><br />
+                  <input 
+                      type="text" 
+                      value={this.state.property} 
+                      name="property" 
+                      placeholder="property or tag" 
+                      onChange={this.handleChange} 
+                  /><br /><br />
+
+                  <label><h3>Create a fact or a false answer.</h3></label>                  
                   <textarea
                     name='textarea'
                     rows={5}
@@ -90,7 +110,7 @@ class factForm extends Component {
                     placeholder="Enter Fact"
                   /><br /><br />
                   
-                  <button className='submit'>Submit</button>
+                  <button onClick={this.handleClick} className='submit'>Submit</button>
                 </fieldset>
               </form>
           </div>
@@ -98,7 +118,7 @@ class factForm extends Component {
     }
 }
 
-export default factForm;
+export default FactForm;
 
 {/* <TextArea       
                     type="text"            

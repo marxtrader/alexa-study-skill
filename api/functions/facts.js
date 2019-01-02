@@ -1,12 +1,12 @@
 var mysql = require('mysql');
 var config = require('../config/config')
 
-var facts = function(firstName, lastName,fact, type, cb) {
+var facts = function(firstName, lastName, fact, topic, property, cb) {
 
   var connection = mysql.createConnection({
       host: config.database.host,
       user: config.database.user,
-      password:config.database.password,
+      password: config.database.password,
       database: config.database.db
   });
     
@@ -16,7 +16,7 @@ var facts = function(firstName, lastName,fact, type, cb) {
     }
   })
     
-  connection.query(`INSERT INTO facts(firstName, lastName, fact, type) VALUE ('${firstName}','${lastName}', '${fact}','${type}',)`, function(error,data) {
+  connection.query(`INSERT INTO facts(firstName, lastName, fact, topic, property) VALUE ('${firstName}','${lastName}', '${fact}', '${topic}', '${property}');`, function(error,data) {
     if(error) {
       console.log("Error Insert Failed : ", error) 
         cb(error, null)
