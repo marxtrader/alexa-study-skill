@@ -11,7 +11,7 @@ var config = {
 },
 	server: {
 			host: '127.0.0.1', //also known as localhost
-			port: '4001'
+			port: '4001' 
 	},
 };
 
