@@ -12,4 +12,3 @@ ReactDOM.render(<Header />, document.getElementById("header"));
 ReactDOM.render(<MainContent />, document.getElementById("right"));
 ReactDOM.render(<Display />, document.getElementById("left"));
 ReactDOM.render(<Footer />, document.getElementById("footer"));
-//ReactDOM.render(<Submit />, document.getElementById("main"));
