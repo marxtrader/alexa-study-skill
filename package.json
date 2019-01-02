@@ -1,13 +1,17 @@
 {
-  "name": "create-react-app-from-scratch",
+  "name": "rockland-web-dev",
   "version": "1.0.0",
-  "description": "",
+  "description": "An alexa and web app for building a skill as a study aide for html and css",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "alexa skill", 
+    "express", 
+    "react" 
+  ],
+  "author": "Christopher Ranni",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.1.0",
