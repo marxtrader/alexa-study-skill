@@ -1,3 +1,6 @@
+// so alexa can retrieve a record. Currently this will return all the records. 
+// however, the plan is to retrieve a random record.
+
 var mysql = require('mysql');
 var config = require('../config/config')
 
