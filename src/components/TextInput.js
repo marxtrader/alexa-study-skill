@@ -1,5 +1,7 @@
 import React, {Component} from "react"
 import TextArea from './TextArea'
+//import postToDataBase from '../functions/postToDataBase'
+let returnMessage = '';
 
 class TextInput extends Component {
     constructor() {
@@ -18,10 +20,21 @@ class TextInput extends Component {
       let data = {
         firstName:this.state.firstName,
         lastName:this.state.lastName,
-        textarea:this.state.textarea //document.querySelector([name='fact'])
+        textarea:this.state.textarea 
       }
       const {firstName, lastName, fact, type} = event.target
-      console.log(data)
+
+      // put data to db. So it can be access from the alexa app from dynamo db.
+      // see function putToDb.js for details
+      // postToDataBase(data, (err, rows) => {
+      //   if (err) {
+      //     console.log("error : ", err)
+      //   } else {
+      //     // return a success message
+      //     returnMessage = `<h4>Your submission has been queued for review. Thank you.</h4>`
+      //   }
+      // })
+      // console.log(returnMessage)
     }
 
     handleTextArea(event) {
@@ -37,7 +50,7 @@ class TextInput extends Component {
     render() {
         return (
           <div>
-            <form onClick={this.handleClick}>
+            <form onClick={this.handleClick} className='fact-form'>
               <fieldset>
                 <legend> Enter A Fact</legend>
                 <h2>Contribute, Tell us who you are.</h2>
@@ -69,9 +82,9 @@ class TextInput extends Component {
                     value={this.state.textarea}
                     onChange={this.handleChange}
                     placeholder="Enter Fact"
-                  />
+                  /><br /><br />
                   
-                  <button>Submit</button>
+                  <button className='submit'>Submit</button>
                 </fieldset>
               </form>
           </div>

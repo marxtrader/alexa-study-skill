@@ -3,8 +3,8 @@ import facts from './posts'
 
 const Display = () => {
     return (
-      <div>
-        <h4>Use this Alexa Skill to reinforce definitions, tags and css properties. Being a contributor will also assist in remembering. This app can be converted to any topic. Enjoy.</h4><br />
+      <div className='display'>
+        <p>Use this Alexa Skill to reinforce definitions, tags and css properties. Being a contributor will also assist in remembering. This app can be converted to any topic. Enjoy.</p><br />
         <p>Simple to use.</p>
         <ul>
           <li>enable the skill from your alexa app.</li>
