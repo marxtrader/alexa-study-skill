@@ -19,7 +19,7 @@ var getSetUser = function(user, cb) {
       })
 
       // work out your sql statement here
-     const query = `INSERT INTO config.database.db (email, password) SELECT * FROM (SELECT 'email', 'password') AS tmp WHERE NOT EXISTS`
+     const query = `INSERT INTO config.database.db (email, password) SELECT * FROM (SELECT 'email', 'password') AS tmp WHERE NOT EXISTS;`
       
       connection.query(query,function(error,rows){
         if(error) {
