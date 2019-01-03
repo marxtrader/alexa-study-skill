@@ -1,7 +1,8 @@
 ## NOTE
 #### Alexa requires node version 8.2 or less. I suggest using node version manager (nvm) to toggle between versions of node durring development
 
-### Install Node and Git on your windows box. There are installers for node nvm mysql and git. 
+### Install Node and Git on your windows box. There are installers for node nvm mysql and git. just search google.
+
 #### I have included credentials for a database I have set up on the web host. Feel free to use the creds included untill you get around to installing your own mysql server. Or I migrate from mysql to dynamo for object storage. 
 
 ### Alexa Skill and React UI for creating a study aide for html and css 
@@ -15,19 +16,19 @@ html
 css
 ```
 
-##### Open another command prompt and navigate to the api directory. From the command line type
+##### Open a command prompt and navigate to the api directory. From the command line type
 #### npm istall
 ##### this will install all the dependencies required. When completed type:
 #### npm start
 
-This will start the web server and you can then navigate to localhost:3000 to display the site. 
+##### This will start the web server and you can then navigate to localhost:3000 to display the site. 
 
 ##### Open another command prompt and navigate to the api directory. From the command line type
 #### npm istall
 ##### this will install all the dependencies required. When completed type:
 #### node app
 
-#### This will run the api server which will take the form values and post them to the webdev table on the mysql database. 
+##### This will run the api server which will take the form values and post them to the webdev table on the mysql database. 
 
 Todo's html
 ```
