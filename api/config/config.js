@@ -2,8 +2,8 @@
 var config = {
 	database: {
 			host:      'webdev.marxcloud.com',     // database host
-			user:       'twilio',         // your database username
-			password: '1qazXSW@',         // your database password
+			user:       '',         // your database username
+			password: '',         // your database password
 			port:       3306,         // default MySQL port
 			db:       'webdev'         // your database name
 	},
