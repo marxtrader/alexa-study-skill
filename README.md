@@ -1,3 +1,6 @@
+## NOTE
+#### Alexa requires node version 8.2 or less. I suggest using node version manager (nvm) to toggle between versions of node durring development
+
 ### Alexa Skill and React UI for creating a study aide for html and css 
 
 #### Don't be intimidated. It isn't that hard to follow. In fact, seems to get harder as you start to learn, but does get easier as time progresses.
