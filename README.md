@@ -3,7 +3,7 @@
 
 ### Install Node and Git on your windows box. There are installers for node nvm mysql and git. just search google.
 
-#### I have included credentials for a database I have set up on the web host. Feel free to use the creds included untill you get around to installing your own mysql server. Or I migrate from mysql to dynamo for object storage. 
+#### Send me an email if you want credentials for a database I have set up on the web host to handle the web submission, or install your own database and replance the credentials in the config/config.js file in the api folder.
 
 ### Alexa Skill and React UI for creating a study aide for html and css 
 
@@ -40,6 +40,6 @@ Todo's Alexa
 ```
 write a function that will return a random fact
 capture the device id
-keep track of correct responses.
+keep track of correct responses. 
 ```
 
