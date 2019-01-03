@@ -1,6 +1,9 @@
 ## NOTE
 #### Alexa requires node version 8.2 or less. I suggest using node version manager (nvm) to toggle between versions of node durring development
 
+### Install Node and Git on your windows box. There are installers for node nvm mysql and git. 
+#### I have included credentials for a database I have set up on the web host. Feel free to use the creds included untill you get around to installing your own mysql server. Or I migrate from mysql to dynamo for object storage. 
+
 ### Alexa Skill and React UI for creating a study aide for html and css 
 
 ### great way to play with many different aspects of full stack development. 
