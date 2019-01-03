@@ -12,10 +12,16 @@ class FactForm extends Component {
             lastName: "",
             fact:"",
             topic:"",
-            property:""
+            property:"",
+            success:"idle"
         }
         this.handleChange = this.handleChange.bind(this)
         this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleChange(event) {
+      const {name, value, type} = event.target
+      type === "radio" ? this.setState({ [name]: value }) : this.setState({ [name]: value })
     }
 
     handleClick(event) {
@@ -39,34 +45,25 @@ class FactForm extends Component {
         property:data.property
       })
       .then(function (response) {
+
         const data = JSON.stringify(response.data)
-        console.log("Data after post to server: ", data)
-        // const content =`<h2>Welcome</h2><p>Your Email ${data.userName} has been recorded.</p>`
-        // document.querySelector('#two').innerHTML = content
+
+        this.setState({'success' : 'Success'})
+   
+        const content =`<h2>Submission Success</h2><p>Your contribution has been queued for inclusion.</p>`
       })
       .catch(function (error) {
         console.log(error);
       });
 
     }
-
-    handleTextArea(event) {
-      this.setState({ [name] : value })
-    }
-
-    handleChange(event) {
-      const {name, value, type} = event.target
-      type === "radio" ? this.setState({ [name]: value }) : this.setState({ [name]: value })
-  }
     
     render() {
         return (
           <div>
             <form className='fact-form'>
               <fieldset>
-                <legend> Enter A Fact</legend>
-                <h2>Contribute, Tell us who you are.</h2>
-
+                <legend> Enter A Fact</legend><br />
                   <label>First Name :</label><br />
                   <input 
                       type="text" 
@@ -86,21 +83,35 @@ class FactForm extends Component {
                       onChange={this.handleChange} 
                   /><br /><br />
 
-                  <label>Topic
-                    <input type="radio"  name="topic" value="css" onChange={this.handleChange} />CSS
-                    <input type="radio"  name="topic" value="html" onChange={this.handleChange} />HTML
+                  <label>Topic *required
+                    <input 
+                      type="radio"  
+                      name="topic" 
+                      value="css" 
+                      onChange={this.handleChange} 
+                    />CSS
+
+                    <input 
+                      required="required" 
+                      type="radio"  
+                      name="topic" 
+                      value="html" 
+                      onChange={this.handleChange} 
+                    />HTML
+
                   </label><br /><br />
 
-                  <label>Property or Tag</label><br />
+                  <label>Property or Tag *required</label><br />
                   <input 
                       type="text" 
                       value={this.state.property} 
                       name="property" 
                       placeholder="property or tag" 
                       onChange={this.handleChange} 
-                  /><br /><br />
+                      required = 'required'
+                  /><br />
 
-                  <label><h3>Create a fact or a false answer.</h3></label>                  
+                  <label><h3>Create a fact. *required</h3></label>                  
                   <textarea
                     name='textarea'
                     rows={5}
@@ -108,9 +119,11 @@ class FactForm extends Component {
                     value={this.state.textarea}
                     onChange={this.handleChange}
                     placeholder="Enter Fact"
+                    required="required"
                   /><br /><br />
                   
                   <button onClick={this.handleClick} className='submit'>Submit</button>
+                  <span className="status">status:{this.state.success}</span>
                 </fieldset>
               </form>
           </div>

@@ -23,6 +23,7 @@ app.post('/', function(req, res) {
       console.log('Success in Post : ', data)
     }
   })
+  res.send('<h3>Success</h3><br /><p>Thank you for your submission</p>')
 })
 
 module.exports = app;

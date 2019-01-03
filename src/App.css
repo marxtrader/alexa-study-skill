@@ -7,7 +7,10 @@ body {
   width:100%;
 }
 a:link {
-  color:limegreen;
+  color:white;
+}
+a:visited {
+  color:white;
 }
 .header-container {
   display:grid;
@@ -41,9 +44,10 @@ a:link {
   margin:auto;
 }
 .fact-form {
-  margin:10px 0 0 125px;
+  margin:10px 0 0 150px;
   width:60%;
   color:limegreen;
+  font-weight:bold;
 }
 .display {
   margin-left:125px;
@@ -78,11 +82,14 @@ a:link {
   color:limegreen;
   border:1px solid green;
 }
+.status {
+  margin-left:25px;
+}
 .footer {
   display:grid;
   grid-template-columns:100%;
-  grid-template-rows:5px;
   text-align:center;
+  margin-top:18px;
 }
 fieldset {
   margin-top:15px;
