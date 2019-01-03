@@ -3,7 +3,14 @@
 
 ### Alexa Skill and React UI for creating a study aide for html and css 
 
-#### Don't be intimidated. It isn't that hard to follow. In fact, seems to get harder as you start to learn, but does get easier as time progresses.
+### great way to play with many different aspects of full stack development. 
+```
+api using express and MySql
+web services using express and react
+Alexa using lambda, skills kit, dynamodb
+html
+css
+```
 
 you start the web server by navigating to the /src directory from the command line and type
 
