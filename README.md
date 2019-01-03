@@ -15,17 +15,19 @@ html
 css
 ```
 
-you start the web server by navigating to the /src directory from the command line and type
-
-npm start
+##### Open another command prompt and navigate to the api directory. From the command line type
+#### npm istall
+##### this will install all the dependencies required. When completed type:
+#### npm start
 
 This will start the web server and you can then navigate to localhost:3000 to display the site. 
 
-Open another command prompt and navigate to the api directory. From the command line type
+##### Open another command prompt and navigate to the api directory. From the command line type
+#### npm istall
+##### this will install all the dependencies required. When completed type:
+#### node app
 
-node app
-
-This will run the api server which will take the form values and post them to the webdev table on the mysql database. 
+#### This will run the api server which will take the form values and post them to the webdev table on the mysql database. 
 
 Todo's html
 ```
