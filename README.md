@@ -15,3 +15,14 @@ node app
 This will run the api server which will take the form values and post them to the webdev table on the mysql database. 
 
 
+####Todo's html
+  Reset form after submission
+  set status to 'success' after submission
+  replace this panel with statistics on current database
+
+####Todo's Alexa
+  write a function that will return a random fact
+  capture the device id
+  keep track of correct responses.
+
+
