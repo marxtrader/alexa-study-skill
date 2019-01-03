@@ -40,6 +40,6 @@ Todo's Alexa
 ```
 write a function that will return a random fact
 capture the device id
-keep track of correct responses.
+keep track of correct responses. 
 ```
 
