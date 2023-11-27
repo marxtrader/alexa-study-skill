@@ -4,9 +4,9 @@ var config = require('../../config/config')
 var getFactsDataSet = (cb) => {
 
     var connection = mysql.createConnection({
-        host: '54.148.123.122',
-        user: 'twilio',
-        password: '1qazXSW@',
+        host: '127.0.0.1',
+        user: 'user',
+        password: 'password',
         database: 'webdev'
     });
       
